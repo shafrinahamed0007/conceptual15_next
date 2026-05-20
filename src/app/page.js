@@ -1,11 +1,14 @@
-import Image from "next/image";
+import Banner from "./components/HomePage/Banner";
+import Stats from "./components/HomePage/Stats";
+import TrendingApps from "./components/HomePage/TrendingApps";
 
 export default function Home() {
   return (
     <div>
-      <h2 className="text-2xl font-bold text-blue-500">
-        Conceptual 15 with nextjs
-      </h2>
+      <Banner />
+
+      <Stats />
+      <TrendingApps />
     </div>
   );
 }

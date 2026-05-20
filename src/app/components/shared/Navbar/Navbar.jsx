@@ -8,7 +8,7 @@ const Navbar = () => {
   return (
     /* Liquid Glass (Glassmorphism) Effect */
     <div className="sticky top-0 z-50 bg-white/30 backdrop-blur-md border-b border-white/20 shadow-sm transition-all duration-300">
-      <div className="navbar w-11/12 mx-auto">
+      <div className="navbar container mx-auto">
 
         {/* Navbar Start */}
         <div className="navbar-start">

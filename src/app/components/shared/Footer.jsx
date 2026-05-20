@@ -18,7 +18,7 @@ const Footer = () => {
 
   return (
     /* ব্যাকগ্রাউন্ড সামান্য গাঢ় (bg-white/40) করা হয়েছে লেখা আরও স্পষ্ট করার জন্য */
-    <footer className="footer footer-horizontal footer-center bg-white/40 backdrop-blur-md border-t border-white/30 rounded-t-3xl p-10 shadow-2xl">
+    <footer className="footer footer-horizontal mt-[120px] footer-center bg-white/40 backdrop-blur-md border-t border-white/30 rounded-t-3xl p-10 shadow-2xl">
       
       {/* Navigation Links */}
       <nav className="grid grid-flow-col gap-8">
