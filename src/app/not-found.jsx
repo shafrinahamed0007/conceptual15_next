@@ -49,11 +49,9 @@ export default function NotFound() {
             </div>
           </div>
         </div>
-        =
+
         <div className="mt-8 text-sm opacity-50">
-          <p>
-            © {new Date().getFullYear()} আপনার কোম্পানি। সর্বস্বত্ব সংরক্ষিত।
-          </p>
+          <p>© {new Date().getFullYear()}</p>
         </div>
       </div>
     </div>
