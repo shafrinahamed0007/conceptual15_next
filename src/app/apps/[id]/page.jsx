@@ -4,6 +4,11 @@ import { FaDownload, FaArrowLeft } from "react-icons/fa";
 import { IoIosStar } from "react-icons/io";
 import Link from "next/link";
 
+export const metadata = {
+  title: "All Apps",
+  description: "This is an application management website",
+};
+
 const AppDetail = async ({ params }) => {
   const { id } = await params;
 
@@ -12,6 +17,11 @@ const AppDetail = async ({ params }) => {
   ).then((res) => res.json());
 
   const appDetail = apps.find((p) => p.id == id);
+
+  let totalRatings = 0;
+  appDetail?.ratings.forEach((rating) => {
+    totalRatings += rating.count;
+  });
 
   if (!appDetail) {
     return (
@@ -38,7 +48,10 @@ const AppDetail = async ({ params }) => {
           Back to Explore
         </Link>
 
-        <div className="bg-white/20 backdrop-blur-md border border-white/30 rounded-2xl p-6 md:p-8 shadow-lg space-y-6">
+        <div
+          className="bg-white/20 backdrop-blur-md border borde
+        r-white/30 rounded-2xl p-6 md:p-8 shadow-lg space-y-6"
+        >
           <div className="flex flex-col sm:flex-row gap-6 items-center sm:items-start text-center sm:text-left">
             <div className="flex justify-center items-center bg-white/40 backdrop-blur-sm rounded-xl p-4 border border-white/20 shadow-sm flex-shrink-0 w-[120px] h-[120px]">
               <Image
