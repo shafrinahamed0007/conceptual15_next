@@ -1,12 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FaGithub } from "react-icons/fa";
-import logo from "../../../../../public/images/logo.png"; // আপনার অরিজিনাল পাথটি আগের মতোই রাখা হলো
+import logo from "../../../../../public/images/logo.png"; 
 import NavLinks from "./NavLinks";
 
 const Navbar = () => {
   return (
-    /* Liquid Glass (Glassmorphism) Effect */
+
     <div className="sticky top-0 z-50 bg-white/30 backdrop-blur-md border-b border-white/20 shadow-sm transition-all duration-300">
       <div className="navbar container mx-auto">
 
@@ -37,7 +37,6 @@ const Navbar = () => {
               </svg>
             </div>
 
-            {/* মোবাইল ড্রপডাউন মেনু গ্লাস লুক */}
             <ul
               tabIndex={0}
               className="menu menu-sm dropdown-content bg-white/70 backdrop-blur-lg rounded-box z-[1] mt-3 w-52 p-2 shadow-xl border border-white/20"
@@ -49,7 +48,7 @@ const Navbar = () => {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition">
             <Image
-              src={logo} // আপনার অরিজিনাল ইমপোর্ট করা লোগো ভ্যারিয়েবল
+              src={logo} 
               alt="Logo"
               width={45}
               height={45}
@@ -61,7 +60,7 @@ const Navbar = () => {
           </Link>
         </div>
 
-        {/* Navbar Center */}
+     
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 gap-2 text-gray-800 font-medium">
             <NavLinks />
