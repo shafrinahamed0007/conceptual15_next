@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { FaDownload, FaStar } from "react-icons/fa";
 
 const Apps = async () => {
@@ -7,7 +8,7 @@ const Apps = async () => {
   ).then((res) => res.json());
 
   return (
-    <div>
+    <div className="container mx-auto">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {apps.map((app) => (
           <div
@@ -51,9 +52,10 @@ const Apps = async () => {
 
               {/* Action Button */}
               <div className="w-full">
+                <Link href={`/apps/${app?.id}`}>
                 <button className="w-full py-2.5 px-4 bg-purple-600/90 hover:bg-purple-600 text-white font-bold text-sm tracking-wide rounded-xl shadow-md transition-all duration-200 hover:shadow-purple-500/20 active:scale-95">
                   See Details
-                </button>
+                </button></Link>
               </div>
             </div>
           </div>

@@ -3,10 +3,8 @@ import Link from "next/link";
 import { FaStar, FaDownload } from "react-icons/fa";
 
 const TrendingApps = async () => {
- 
   await new Promise((resolve) => setTimeout(resolve, 2000));
 
- 
   const apps = await fetch(
     "https://conceptual15-next.vercel.app/data.json",
   ).then((res) => res.json());
@@ -69,9 +67,11 @@ const TrendingApps = async () => {
 
               {/* Action Button */}
               <div className="w-full">
-                <button className="w-full py-2.5 px-4 bg-purple-600/90 hover:bg-purple-600 text-white font-bold text-sm tracking-wide rounded-xl shadow-md transition-all duration-200 hover:shadow-purple-500/20 active:scale-95">
-                  See Details
-                </button>
+                <Link href={`/apps/${app?.id}`}>
+                  <button className="w-full py-2.5 px-4 bg-purple-600/90 hover:bg-purple-600 text-white font-bold text-sm tracking-wide rounded-xl shadow-md transition-all duration-200 hover:shadow-purple-500/20 active:scale-95">
+                    See Details
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -80,7 +80,6 @@ const TrendingApps = async () => {
       <div className="mt-5 flex  justify-center">
         <Link
           href="/apps"
-          
           rel="noopener noreferrer"
           className="btn bg-blue-600/80 hover:bg-blue-600 text-white border border-white/10 backdrop-blur-sm shadow-md gap-2 w-2/12"
         >
